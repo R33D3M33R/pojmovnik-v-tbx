@@ -6,6 +6,9 @@ import re
 import codecs
 from pyquery import PyQuery
 
+__author__ = "Andrej Mernik, 2014"
+__license__ = "GPLv3"
+
 '''
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
