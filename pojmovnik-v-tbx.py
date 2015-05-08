@@ -6,7 +6,8 @@ import re
 import codecs
 from pyquery import PyQuery
 
-__author__ = "Andrej Mernik, 2014"
+__author__ = "Andrej Mernik"
+__copyright__ = "Copyright 2014 Andrej Mernik"
 __license__ = "GPLv3"
 
 '''
