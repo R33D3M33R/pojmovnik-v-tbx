@@ -5,7 +5,7 @@
 
 jezik_a="sl"
 jezik_b="pt" # izberemo jezik, ki je najbolj preveden
-prvi_zagon=0 # nastavite ali je to prvi zagon (1|0)
+prvi_zagon=1 # nastavite ali je to prvi zagon (1|0)
 statistika="statistika.txt" # izhodna datoteka s statističnimi podatki
 
 skupno_a=0
@@ -13,7 +13,7 @@ skupno_b=0
 
 if [ $prvi_zagon == 1 ]
 then
-  sudo apt-get install dselect
+  sudo apt-get install dselect gettext
   # posodobi podatkovno zbirko dselect
   sudo dselect update
 
@@ -32,11 +32,12 @@ while read -r vrstica ; do
     mapa=$(dirname $vrstica)
     datoteka=$(basename $vrstica)
     ime_datoteke="${datoteka%.*}"
-    echo "Obdelovanje $ime_datoteke v mapi $mapa"
+    echo "Obdelovanje $ime_datoteke v mapi $mapa: jezik $jezik_a"
     msgunfmt "$mapa/$datoteka" -o /tmp/tmp.po
     prevedenost_b=$(msgfmt --statistics -o /dev/null /tmp/tmp.po 2>&1 | awk -F' ' '{print $1}')
     mapa=${mapa/\/$jezik_b\//\/$jezik_a\//}
     if [ -f "$mapa/$datoteka" ]; then
+      echo " jezik $jezik_b"
       msgunfmt "$mapa/$datoteka" -o /tmp/tmp.po
       prevedenost_a=$(msgfmt --statistics -o /dev/null /tmp/tmp.po  2>&1 | awk -F' ' '{print $1}')
     else
