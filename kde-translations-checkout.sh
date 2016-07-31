@@ -32,7 +32,7 @@ svn update --set-depth empty svn/trunk/l10n-kf5
 svn update --set-depth empty svn/trunk/l10n-kf5/templates
 svn update --set-depth infinity svn/trunk/l10n-kf5/templates/messages
 
-# prevodi za KDE4 trunk
+# prevodi za KF5 trunk
 svn update --set-depth empty svn/trunk/l10n-kf5/sl
 svn update --set-depth infinity svn/trunk/l10n-kf5/sl/messages
 
@@ -41,6 +41,6 @@ svn update --set-depth empty svn/branches/stable/l10n-kf5
 svn update --set-depth empty svn/branches/stable/l10n-kf5/templates
 svn update --set-depth infinity svn/branches/stable/l10n-kf5/templates/messages
 
-# prevodi za KDE4 stable
+# prevodi za KF5 stable
 svn update --set-depth empty svn/branches/stable/l10n-kf5/sl
 svn update --set-depth infinity svn/branches/stable/l10n-kf5/sl/messages
