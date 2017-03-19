@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Avtor: Andrej Mernik, 2016, http://andrej.mernik.eu/
+#Avtor: Andrej Mernik, 2016-2017, https://andrej.mernik.eu/
 #Licenca: GPLv3
 
 # osnovna mapa
