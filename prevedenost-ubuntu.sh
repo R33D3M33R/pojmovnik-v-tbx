@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Avtor: Andrej Mernik, 2014, http://andrej.mernik.eu/
+#Avtor: Andrej Mernik, 2014-2017, https://andrej.mernik.eu/
 #Licenca: GPLv3
 
 jezik_a="sl"
